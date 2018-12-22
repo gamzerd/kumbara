@@ -1,15 +1,15 @@
 //
-//  TransactionTreeTests.swift
-//  TransactionTreeTests
+//  KumbaraTests.swift
+//  KumbaraTests
 //
 //  Created by Gamze on 12/20/18.
 //  Copyright © 2018 gamzerd. All rights reserved.
 //
 
 import XCTest
-@testable import TransactionTree
+@testable import Kumbara
 
-class TransactionTreeTests: XCTestCase {
+class KumbaraTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

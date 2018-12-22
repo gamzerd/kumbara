@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  TransactionTree
+//  Kumbara
 //
 //  Created by Gamze on 12/20/18.
 //  Copyright © 2018 gamzerd. All rights reserved.
@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        app.router.start()
         return true
     }
 
