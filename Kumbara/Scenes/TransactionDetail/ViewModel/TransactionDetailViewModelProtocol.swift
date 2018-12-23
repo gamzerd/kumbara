@@ -13,5 +13,5 @@ protocol TransactionDetailViewModelProtocol {
     var transaction: Transaction { get set }
     
     func getTitle() -> String
-
+    
 }

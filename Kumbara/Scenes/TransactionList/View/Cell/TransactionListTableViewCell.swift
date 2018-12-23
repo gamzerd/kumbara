@@ -10,19 +10,21 @@ import UIKit
 
 class TransactionListTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var amount: UILabel!
-    @IBOutlet weak var albumImageView: UIImageView!
+    @IBOutlet private weak var title: UILabel!
+    @IBOutlet private weak var amount: UILabel!
+    @IBOutlet private weak var albumImageView: UIImageView!
     
     /**
      * Setups cell.
-     * @param album: transaction object to set cell.
+     * @param transaction: transaction object to set cell.
      */
     func setup(with transaction: Transaction) {
         
+        selectionStyle = .none
+        
         title.text = transaction.description
         amount.text = transaction.amount + " £"
-
+        
         if (transaction.amount.range(of:"-") != nil){
             albumImageView.image = UIImage(named: "money-out")
         } else {

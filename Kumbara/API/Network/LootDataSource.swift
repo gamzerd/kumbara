@@ -10,10 +10,10 @@ import Foundation
 
 class LootDataSource: DataSourceProtocol {
     
-    var api: Service
+    private var api: Service
     
     init() {
-        self.api = Service(url: AppConstants.API.base_url)
+        self.api = Service(url: AppConstants.API.baseUrl)
     }
     
     /**

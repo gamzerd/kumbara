@@ -11,6 +11,6 @@ import Foundation
 struct AppConstants {
     
     struct API {
-        static let base_url = "https://private-710eeb-lootiosinterview.apiary-mock.com/"
+        static let baseUrl = "https://private-710eeb-lootiosinterview.apiary-mock.com/"
     }
 }

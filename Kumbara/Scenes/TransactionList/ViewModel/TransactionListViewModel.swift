@@ -10,8 +10,9 @@ import Foundation
 
 final class TransactionListViewModel: TransactionListViewModelProtocol {
    
-    var view: TransactionListViewProtocol?
     var sections = [DaySection]()
+    
+    weak var viewDelegate: TransactionListViewProtocol?
     
     private let dataSource: DataSourceProtocol
     
@@ -24,11 +25,11 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
     }
     
     /**
-     * Called when a row of the album list is selected.
+     * Called when a row of the transaction list is selected.
      * @param index: index of the selected row.
      */
     func didRowSelect(indexSection: Int, indexRow: Int) {
-        self.view!.openPage(transaction: self.sections[indexSection].transactions[indexRow])
+        viewDelegate?.openPage(transaction: sections[indexSection].transactions[indexRow])
     }
     
     /**
@@ -48,18 +49,18 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
         if let list = list {
             
             let groups = Dictionary(grouping: list) { (transaction) -> Date in
-                return self.getDay(date: transaction.authorisation_date)
+                return self.getDay(date: transaction.authorisationDate)
             }
             
             self.sections = groups.map(DaySection.init(day:transactions:)).sorted(by: {
                 $0.day.compare($1.day) == .orderedDescending
             })
             
-            self.view!.showList()
+            viewDelegate?.showList()
         }
         
         if error != nil {
-            self.view!.showError(message: "Fetching list failed!")
+            viewDelegate?.showError(message: "Fetching list failed!")
         }
     }
     

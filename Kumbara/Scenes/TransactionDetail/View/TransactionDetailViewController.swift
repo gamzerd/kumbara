@@ -10,7 +10,7 @@ import UIKit
 
 class TransactionDetailViewController: UIViewController {
     
-   
+    
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: TransactionDetailViewModelProtocol!
@@ -23,8 +23,7 @@ class TransactionDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel.getTitle()
-        tableView.register(UINib(nibName: "TransactionDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "detailCell")
-        
+        tableView.register(TransactionDetailTableViewCell.self)
     }
 }
 
@@ -39,7 +38,7 @@ extension TransactionDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as! TransactionDetailTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionDetailTableViewCell.identifier) as! TransactionDetailTableViewCell
         cell.setup(with: self.viewModel.transaction)
         
         return cell

@@ -12,11 +12,12 @@ class TransactionDetailViewModel: TransactionDetailViewModelProtocol {
     
     var transaction: Transaction
     
-    init (transaction: Transaction) {
+    init(transaction: Transaction) {
         self.transaction = transaction
     }
     
     func getTitle() -> String {
-        return DateUtility.formatDate(date: self.transaction.authorisation_date, format:"EEEE, dd MMM, HH:mm")
+        
+        return self.transaction.authorisationDate.formatDate(format: "EEEE, dd MMM, HH:mm")
     }
 }

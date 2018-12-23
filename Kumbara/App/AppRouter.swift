@@ -10,7 +10,7 @@ import UIKit
 
 final class AppRouter {
     
-    let window: UIWindow
+    private let window: UIWindow
     
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)

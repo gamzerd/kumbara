@@ -8,14 +8,14 @@
 
 import Foundation
 
-final class DateUtility {
+extension Date {
     
-    static func formatDate(date: Date, format: String? = "EEEE, MMM dd, yyyy") -> String {
+    func formatDate(format: String = "EEEE, MMM dd, yyyy") -> String {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         
-        return dateFormatter.string(from: date)
+        return dateFormatter.string(from: self)
     }
 }
 

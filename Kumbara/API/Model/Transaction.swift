@@ -11,38 +11,34 @@ import Foundation
 // Transaction model
 class Transaction: Codable {
     
-    /*{
-    "amount":                       "-3.95",
-    "authorisation_date":           "2016-01-21T12:43:29+00:00",
-    "description":                  "Marks & Spencer",
-    "location":                     {
-    "latitude":     "51.505530",
-    "longitude":    "-0.098169"
-    },
-    "post_transaction_balance":     "14.54",
-    "settlement_date":              "2016-01-22T10:48:21+00:00"
-    }*/
-    
     var amount: String = ""
-    var authorisation_date: Date
+    var authorisationDate: Date
     var description: String = ""
     var location: Location?
-    var post_transaction_balance: String = ""
-    var settlement_date: Date
+    var postTransactionBalance: String = ""
+    var settlementDate: Date
     
     init(amount: String,
-         authorisation_date: Date,
+         authorisationDate: Date,
          description: String,
          location: Location,
-         post_transaction_balance: String,
-         settlement_date: Date)
+         postTransactionBalance: String,
+         settlementDate: Date)
     {
         self.amount = amount
-        self.authorisation_date = authorisation_date
+        self.authorisationDate = authorisationDate
         self.description = description
         self.location = location
-        self.post_transaction_balance = post_transaction_balance
-        self.settlement_date = settlement_date
+        self.postTransactionBalance = postTransactionBalance
+        self.settlementDate = settlementDate
     }
     
+    enum CodingKeys: String, CodingKey {
+        case amount,
+        authorisationDate = "authorisation_date",
+        description,
+        location,
+        postTransactionBalance = "post_transaction_balance",
+        settlementDate = "settlement_date"
+    }
 }

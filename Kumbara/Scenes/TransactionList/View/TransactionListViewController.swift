@@ -8,25 +8,24 @@
 
 import UIKit
 
-class TransactionListViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+final class TransactionListViewController: UIViewController {
     
-    var viewModel: TransactionListViewModelProtocol!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    private var viewModel: TransactionListViewModelProtocol!
     weak var delegate: ShowDetailsCoordinatorDelegate!
-
+    
     convenience init(viewModel: TransactionListViewModelProtocol) {
         self.init()
         self.viewModel = viewModel
-        self.viewModel.view = self
+        self.viewModel.viewDelegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel.getTitle()
-        self.viewModel.load()
-        tableView.register(UINib(nibName: "TransactionListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-
+        viewModel.load()
+        tableView.register(TransactionListTableViewCell.self)
     }
 }
 
@@ -69,8 +68,8 @@ extension TransactionListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let section = self.viewModel.sections[section]
         let date = section.day
-
-        return DateUtility.formatDate(date: date)
+        
+        return date.formatDate()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,13 +78,12 @@ extension TransactionListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TransactionListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionListTableViewCell.identifier) as! TransactionListTableViewCell
         
         let section = self.viewModel.sections[indexPath.section]
         let transaction = section.transactions[indexPath.row]
-        cell.selectionStyle = .none
         cell.setup(with: transaction)
-
+        
         return cell
     }
     

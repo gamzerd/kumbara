@@ -8,27 +8,27 @@
 
 import Foundation
 
-protocol TransactionListViewModelProtocol {
-        
-    var sections: [DaySection] { get set }
+protocol TransactionListViewModelProtocol: class {
     
-    var view: TransactionListViewProtocol? { get set }
+    var viewDelegate: TransactionListViewProtocol? { get set }
+    
+    var sections: [DaySection] { get set }
     
     func load()
     
     func getTitle() -> String
-
+    
     func didRowSelect(indexSection: Int, indexRow: Int)
-
+    
 }
 
-protocol TransactionListViewProtocol {
+protocol TransactionListViewProtocol: class {
     
     func showList()
     
     func showError(message: String)
     
     func openPage(transaction: Transaction)
-
+    
 }
 

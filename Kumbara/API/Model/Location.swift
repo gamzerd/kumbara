@@ -10,7 +10,7 @@ import Foundation
 
 // Location model
 class Location: Codable {
-  
+    
     var latitude: String = ""
     var longitude: String = ""
     
