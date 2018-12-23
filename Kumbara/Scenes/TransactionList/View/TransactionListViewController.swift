@@ -81,4 +81,25 @@ extension TransactionListViewController: UITableViewDataSource {
 
         return cell
     }
+    
+}
+
+extension TransactionListViewController: UITableViewDelegate {
+    
+   /* func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = UIView(frame: CGRect(x:300, y:0, width:10, height:18))
+        let label = UILabel(frame: CGRect(x:100, y:5, width:10, height:18))
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.text = "This is a test";
+        view.addSubview(label);
+        view.backgroundColor = UIColor.gray;
+        return view
+        
+    }*/
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
 }
