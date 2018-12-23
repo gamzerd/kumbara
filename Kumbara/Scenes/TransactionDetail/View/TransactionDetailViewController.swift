@@ -22,7 +22,7 @@ class TransactionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = viewModel.getTitle()
         tableView.register(UINib(nibName: "TransactionDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "detailCell")
         
     }

@@ -15,4 +15,8 @@ class TransactionDetailViewModel: TransactionDetailViewModelProtocol {
     init (transaction: Transaction) {
         self.transaction = transaction
     }
+    
+    func getTitle() -> String {
+        return DateUtility.formatDate(date: self.transaction.authorisation_date, format:"EEEE, dd MMM, HH:mm")
+    }
 }

@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+final class DateUtility {
+    
+    static func formatDate(date: Date, format: String? = "EEEE, MMM dd, yyyy") -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        
+        return dateFormatter.string(from: date)
+    }
+}
+

@@ -18,7 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="532" height="453.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bys-lZ-aoR">
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No location info!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhu-UB-Kh6">
+                        <rect key="frame" x="0.0" y="0.0" width="532" height="300"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bys-lZ-aoR">
                         <rect key="frame" x="0.0" y="0.0" width="532" height="300"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="300" id="PdF-MM-By4"/>
@@ -39,10 +46,14 @@
                     <constraint firstItem="VLT-zt-6Up" firstAttribute="trailing" secondItem="rqK-Li-r8a" secondAttribute="trailing" id="4bw-zC-jYH"/>
                     <constraint firstItem="VLT-zt-6Up" firstAttribute="leading" secondItem="rqK-Li-r8a" secondAttribute="leading" id="8Fv-1c-2ac"/>
                     <constraint firstItem="Bys-lZ-aoR" firstAttribute="leading" secondItem="qxY-iL-wnf" secondAttribute="leading" id="Cpt-lo-a1U"/>
+                    <constraint firstAttribute="trailing" secondItem="zhu-UB-Kh6" secondAttribute="trailing" id="Cur-LU-TNH"/>
                     <constraint firstItem="rqK-Li-r8a" firstAttribute="leading" secondItem="qxY-iL-wnf" secondAttribute="leading" constant="16" id="Ev1-20-o39"/>
                     <constraint firstAttribute="trailing" secondItem="rqK-Li-r8a" secondAttribute="trailing" constant="16" id="JDk-ke-wCu"/>
+                    <constraint firstItem="zhu-UB-Kh6" firstAttribute="top" secondItem="qxY-iL-wnf" secondAttribute="top" id="Xjz-xM-WdR"/>
+                    <constraint firstItem="zhu-UB-Kh6" firstAttribute="leading" secondItem="qxY-iL-wnf" secondAttribute="leading" id="au7-ee-Jxb"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VLT-zt-6Up" secondAttribute="bottom" constant="8" id="beJ-Fg-1qJ"/>
                     <constraint firstItem="Bys-lZ-aoR" firstAttribute="top" secondItem="qxY-iL-wnf" secondAttribute="top" id="hin-Zo-7My"/>
+                    <constraint firstItem="zhu-UB-Kh6" firstAttribute="bottom" secondItem="Bys-lZ-aoR" secondAttribute="bottom" id="jGw-eb-caf"/>
                     <constraint firstAttribute="trailing" secondItem="Bys-lZ-aoR" secondAttribute="trailing" id="kDq-m0-HDh"/>
                     <constraint firstItem="VLT-zt-6Up" firstAttribute="top" secondItem="rqK-Li-r8a" secondAttribute="bottom" constant="16" id="mxq-Tx-F2f"/>
                     <constraint firstItem="rqK-Li-r8a" firstAttribute="top" secondItem="Bys-lZ-aoR" secondAttribute="bottom" constant="8" id="q3r-dw-N2Y"/>
@@ -51,6 +62,7 @@
             <viewLayoutGuide key="safeArea" id="Nke-Xi-ZUT"/>
             <connections>
                 <outlet property="descriptionLabel" destination="VLT-zt-6Up" id="DMY-ni-api"/>
+                <outlet property="errorLabel" destination="zhu-UB-Kh6" id="Ki6-1H-4CB"/>
                 <outlet property="mapView" destination="Bys-lZ-aoR" id="IFC-qB-3P9"/>
                 <outlet property="transactionNameLabel" destination="rqK-Li-r8a" id="W7H-qV-6uo"/>
             </connections>
