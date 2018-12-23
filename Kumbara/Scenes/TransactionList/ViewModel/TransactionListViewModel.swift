@@ -9,7 +9,7 @@
 import Foundation
 
 final class TransactionListViewModel: TransactionListViewModelProtocol {
-    
+   
     var view: TransactionListViewProtocol?
     var sections = [DaySection]()
     
@@ -21,6 +21,14 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
     
     func getTitle() -> String {
         return "Kumbara"
+    }
+    
+    /**
+     * Called when a row of the album list is selected.
+     * @param index: index of the selected row.
+     */
+    func didRowSelect(indexSection: Int, indexRow: Int) {
+        self.view!.openPage(transaction: self.sections[indexSection].transactions[indexRow])
     }
     
     /**

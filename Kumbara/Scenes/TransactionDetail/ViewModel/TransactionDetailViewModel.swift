@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class TransactionDetailViewModel: TransactionDetailViewModelProtocol {
+    
+    var transaction: Transaction
+    
+    init (transaction: Transaction) {
+        self.transaction = transaction
+    }
+}

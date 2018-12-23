@@ -12,6 +12,13 @@
 		FA113E1721CDA92F00708940 /* TransactionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA113E1521CDA92F00708940 /* TransactionListTableViewCell.swift */; };
 		FA113E1821CDA92F00708940 /* TransactionListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA113E1621CDA92F00708940 /* TransactionListTableViewCell.xib */; };
 		FA113E1B21CDB0FE00708940 /* TransactionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA113E1A21CDB0FE00708940 /* TransactionListViewController.xib */; };
+		FA1148DA21CF9CCD002608F4 /* TransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1148D921CF9CCD002608F4 /* TransactionDetailViewController.xib */; };
+		FA1148DC21CF9F14002608F4 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1148DB21CF9F14002608F4 /* TransactionDetailViewController.swift */; };
+		FA1148E021CF9FC9002608F4 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1148DF21CF9FC9002608F4 /* TransactionDetailViewModel.swift */; };
+		FA1148E221CF9FEE002608F4 /* TransactionDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1148E121CF9FEE002608F4 /* TransactionDetailViewModelProtocol.swift */; };
+		FA1148E621CFA638002608F4 /* TransactionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1148E521CFA638002608F4 /* TransactionDetailTableViewCell.swift */; };
+		FA1148E821CFA67C002608F4 /* TransactionDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1148E721CFA67C002608F4 /* TransactionDetailTableViewCell.xib */; };
+		FA1148EC21CFC757002608F4 /* TransactionDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1148EB21CFC757002608F4 /* TransactionDetailBuilder.swift */; };
 		FA8A0D2721CBE93D00B9699B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A0D2621CBE93D00B9699B /* AppDelegate.swift */; };
 		FA8A0D2921CBE93D00B9699B /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A0D2821CBE93D00B9699B /* TransactionListViewController.swift */; };
 		FA8A0D2E21CBE94000B9699B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8A0D2D21CBE94000B9699B /* Assets.xcassets */; };
@@ -46,6 +53,13 @@
 		FA113E1521CDA92F00708940 /* TransactionListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListTableViewCell.swift; sourceTree = "<group>"; };
 		FA113E1621CDA92F00708940 /* TransactionListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionListTableViewCell.xib; sourceTree = "<group>"; };
 		FA113E1A21CDB0FE00708940 /* TransactionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListViewController.xib; sourceTree = "<group>"; };
+		FA1148D921CF9CCD002608F4 /* TransactionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionDetailViewController.xib; sourceTree = "<group>"; };
+		FA1148DB21CF9F14002608F4 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		FA1148DF21CF9FC9002608F4 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		FA1148E121CF9FEE002608F4 /* TransactionDetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModelProtocol.swift; sourceTree = "<group>"; };
+		FA1148E521CFA638002608F4 /* TransactionDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailTableViewCell.swift; sourceTree = "<group>"; };
+		FA1148E721CFA67C002608F4 /* TransactionDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionDetailTableViewCell.xib; sourceTree = "<group>"; };
+		FA1148EB21CFC757002608F4 /* TransactionDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailBuilder.swift; sourceTree = "<group>"; };
 		FA8A0D2321CBE93D00B9699B /* Kumbara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kumbara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8A0D2621CBE93D00B9699B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8A0D2821CBE93D00B9699B /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +107,73 @@
 				FA113E1621CDA92F00708940 /* TransactionListTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA1148D621CF9C2D002608F4 /* TransactionList */ = {
+			isa = PBXGroup;
+			children = (
+				FA1148E321CFA380002608F4 /* View */,
+				FA1148D721CF9C8B002608F4 /* ViewModel */,
+			);
+			path = TransactionList;
+			sourceTree = "<group>";
+		};
+		FA1148D721CF9C8B002608F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA113E0B21CD51DB00708940 /* TransactionListContracts.swift */,
+				FA113E0D21CD525C00708940 /* TransactionListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA1148D821CF9CA1002608F4 /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FA1148E421CFA396002608F4 /* View */,
+				FA1148DD21CF9F2E002608F4 /* ViewModel */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		FA1148DD21CF9F2E002608F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA1148DF21CF9FC9002608F4 /* TransactionDetailViewModel.swift */,
+				FA1148E121CF9FEE002608F4 /* TransactionDetailViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA1148DE21CF9F38002608F4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA1148E521CFA638002608F4 /* TransactionDetailTableViewCell.swift */,
+				FA1148E721CFA67C002608F4 /* TransactionDetailTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA1148E321CFA380002608F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A0D2821CBE93D00B9699B /* TransactionListViewController.swift */,
+				FA113E1A21CDB0FE00708940 /* TransactionListViewController.xib */,
+				FA8A0D5321CC265900B9699B /* TransactionListBuilder.swift */,
+				FA113E1921CDAA2B00708940 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA1148E421CFA396002608F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA1148DB21CF9F14002608F4 /* TransactionDetailViewController.swift */,
+				FA1148D921CF9CCD002608F4 /* TransactionDetailViewController.xib */,
+				FA1148EB21CFC757002608F4 /* TransactionDetailBuilder.swift */,
+				FA1148DE21CF9F38002608F4 /* Cell */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FA8A0D1A21CBE93D00B9699B = {
@@ -151,12 +232,8 @@
 		FA8A0D4B21CC0B2000B9699B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				FA113E1921CDAA2B00708940 /* Cell */,
-				FA8A0D2821CBE93D00B9699B /* TransactionListViewController.swift */,
-				FA113E1A21CDB0FE00708940 /* TransactionListViewController.xib */,
-				FA8A0D5321CC265900B9699B /* TransactionListBuilder.swift */,
-				FA113E0B21CD51DB00708940 /* TransactionListContracts.swift */,
-				FA113E0D21CD525C00708940 /* TransactionListViewModel.swift */,
+				FA1148D621CF9C2D002608F4 /* TransactionList */,
+				FA1148D821CF9CA1002608F4 /* TransactionDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -302,6 +379,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1148DA21CF9CCD002608F4 /* TransactionDetailViewController.xib in Resources */,
+				FA1148E821CFA67C002608F4 /* TransactionDetailTableViewCell.xib in Resources */,
 				FA8A0D3121CBE94000B9699B /* LaunchScreen.storyboard in Resources */,
 				FA113E1B21CDB0FE00708940 /* TransactionListViewController.xib in Resources */,
 				FA8A0D2E21CBE94000B9699B /* Assets.xcassets in Resources */,
@@ -330,13 +409,18 @@
 				FA8A0D2921CBE93D00B9699B /* TransactionListViewController.swift in Sources */,
 				FA113E0C21CD51DB00708940 /* TransactionListContracts.swift in Sources */,
 				FA8A0D2721CBE93D00B9699B /* AppDelegate.swift in Sources */,
+				FA1148E621CFA638002608F4 /* TransactionDetailTableViewCell.swift in Sources */,
 				FA113E1721CDA92F00708940 /* TransactionListTableViewCell.swift in Sources */,
 				FA8A0D5421CC265900B9699B /* TransactionListBuilder.swift in Sources */,
 				FA8A0D5021CC0B9400B9699B /* AppRouter.swift in Sources */,
+				FA1148E021CF9FC9002608F4 /* TransactionDetailViewModel.swift in Sources */,
 				FA8A0D4E21CC0B8700B9699B /* AppContainer.swift in Sources */,
 				FA8A0D6721CD30F100B9699B /* TransactionListResponse.swift in Sources */,
 				FA8A0D4821CC007E00B9699B /* Service.swift in Sources */,
 				FA8A0D4A21CC009200B9699B /* ServiceProtocol.swift in Sources */,
+				FA1148EC21CFC757002608F4 /* TransactionDetailBuilder.swift in Sources */,
+				FA1148E221CF9FEE002608F4 /* TransactionDetailViewModelProtocol.swift in Sources */,
+				FA1148DC21CF9F14002608F4 /* TransactionDetailViewController.swift in Sources */,
 				FA8A0D6421CD2B1F00B9699B /* Location.swift in Sources */,
 				FA8A0D5E21CD261F00B9699B /* AppConstants.swift in Sources */,
 			);

@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+final class TransactionDetailBuilder {
+    
+    static func make(with viewModel: TransactionDetailViewModelProtocol) -> TransactionDetailViewController {
+        let viewController = TransactionDetailViewController(viewModel: viewModel)
+        return viewController
+    }
+}

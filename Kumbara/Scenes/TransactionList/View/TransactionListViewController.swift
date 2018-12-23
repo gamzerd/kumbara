@@ -13,7 +13,8 @@ class TransactionListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: TransactionListViewModelProtocol!
-    
+    weak var delegate: ShowDetailsCoordinatorDelegate!
+
     convenience init(viewModel: TransactionListViewModelProtocol) {
         self.init()
         self.viewModel = viewModel
@@ -47,6 +48,14 @@ extension TransactionListViewController: TransactionListViewProtocol {
     func showError(message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    /**
+     * Opens detail page.
+     * @param transaction: Object to set details, fromViewController: controller to show detail
+     */
+    func openPage(transaction: Transaction) {
+        self.delegate.showDetails(transaction: transaction, fromViewController: self)
     }
     
 }
@@ -97,6 +106,10 @@ extension TransactionListViewController: UITableViewDelegate {
         return view
         
     }*/
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.viewModel.didRowSelect(indexSection: indexPath.section, indexRow: indexPath.row)
+    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40

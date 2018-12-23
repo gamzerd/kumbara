@@ -21,8 +21,26 @@ final class  AppRouter {
      */
     func start() {
         let viewController = TransactionListBuilder.make()
+        viewController.delegate = self
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+    }
+}
+
+protocol ShowDetailsCoordinatorDelegate: class {
+    func showDetails(transaction: Transaction, fromViewController: UIViewController)
+}
+
+extension AppRouter: ShowDetailsCoordinatorDelegate {
+    
+    /**
+     * Shows details of transaction list.
+     * @param transaction: Object to set details, fromViewController: controller to show detail
+     */
+    func showDetails(transaction: Transaction, fromViewController: UIViewController) {
+        let viewModel = TransactionDetailViewModel(transaction: transaction)
+        let transactionDetailVC = TransactionDetailBuilder.make(with: viewModel)
+        fromViewController.show(transactionDetailVC, sender: nil)
     }
 }

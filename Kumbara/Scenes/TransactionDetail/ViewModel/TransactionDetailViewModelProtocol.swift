@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol TransactionDetailViewModelProtocol {
+    
+    var transaction: Transaction { get set }
+    
+}

@@ -18,6 +18,8 @@ protocol TransactionListViewModelProtocol {
     
     func getTitle() -> String
 
+    func didRowSelect(indexSection: Int, indexRow: Int)
+
 }
 
 protocol TransactionListViewProtocol {
@@ -26,5 +28,7 @@ protocol TransactionListViewProtocol {
     
     func showError(message: String)
     
+    func openPage(transaction: Transaction)
+
 }
 

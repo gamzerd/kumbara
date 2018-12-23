@@ -14,7 +14,6 @@ final class TransactionListBuilder {
         
         let viewModel = TransactionListViewModel(dataSource: app.dataSource)
         let viewController = TransactionListViewController(viewModel: viewModel)
-       // viewController.delegate = self
         return viewController
 
     }
