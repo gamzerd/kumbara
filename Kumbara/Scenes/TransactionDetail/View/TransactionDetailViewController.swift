@@ -8,12 +8,11 @@
 
 import UIKit
 
-class TransactionDetailViewController: UIViewController {
+final class TransactionDetailViewController: UIViewController {
     
+    @IBOutlet private weak var tableView: UITableView!
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    var viewModel: TransactionDetailViewModelProtocol!
+    private var viewModel: TransactionDetailViewModelProtocol!
     
     convenience init(viewModel: TransactionDetailViewModelProtocol) {
         self.init()
@@ -39,7 +38,7 @@ extension TransactionDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionDetailTableViewCell.identifier) as! TransactionDetailTableViewCell
-        cell.setup(with: self.viewModel.transaction)
+        cell.setup(with: viewModel.transaction)
         
         return cell
     }

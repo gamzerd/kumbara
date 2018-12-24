@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LootDataSource: DataSourceProtocol {
+final class LootDataSource: DataSourceProtocol {
     
     private var api: Service
     

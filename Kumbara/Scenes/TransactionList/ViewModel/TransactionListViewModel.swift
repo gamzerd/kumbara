@@ -9,7 +9,7 @@
 import Foundation
 
 final class TransactionListViewModel: TransactionListViewModelProtocol {
-   
+    
     var sections = [DaySection]()
     
     weak var viewDelegate: TransactionListViewProtocol?
@@ -21,7 +21,7 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
     }
     
     /**
-     * Called when title get.
+     * Called to get title.
      */
     func getTitle() -> String {
         return "Kumbara"
@@ -75,11 +75,10 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
      * @return TransactionDetailViewController: controller to show
      */
     func didPressLong(indexSection: Int, indexRow: Int) -> TransactionDetailViewController {
-      
+        
         let detailViewModel = TransactionDetailViewModel(transaction: sections[indexSection].transactions[indexRow])
         return TransactionDetailBuilder.make(with: detailViewModel)
     }
-    
 }
 
 struct DaySection {

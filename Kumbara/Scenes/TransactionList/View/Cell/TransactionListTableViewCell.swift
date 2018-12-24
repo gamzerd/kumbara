@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionListTableViewCell: UITableViewCell {
+final class TransactionListTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var title: UILabel!
     @IBOutlet private weak var amount: UILabel!

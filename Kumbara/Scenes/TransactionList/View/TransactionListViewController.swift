@@ -104,12 +104,12 @@ extension TransactionListViewController: UITableViewDelegate {
 extension TransactionListViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-       
+        
         guard let indexPath = tableView.indexPathForRow(at: location) else {
             return nil
         }
         
-       return viewModel.didPressLong(indexSection: indexPath.section, indexRow: indexPath.row)
+        return viewModel.didPressLong(indexSection: indexPath.section, indexRow: indexPath.row)
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {

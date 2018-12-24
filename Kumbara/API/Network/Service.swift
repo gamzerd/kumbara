@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Service: ServiceProtocol {
+final class Service: ServiceProtocol {
     
     var url: String
     

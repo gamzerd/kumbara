@@ -11,10 +11,10 @@ import MapKit
 
 class TransactionDetailTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var transactionNameLabel: UILabel!
+    @IBOutlet private weak var errorLabel: UILabel!
+    @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var transactionNameLabel: UILabel!
     
     /**
      * Setups cell.
@@ -30,11 +30,19 @@ class TransactionDetailTableViewCell: UITableViewCell {
         }
     }
     
+    /**
+     * Called when there is no location info.
+     */
     private func showNoLocation() {
         mapView.isHidden = true
         errorLabel.isHidden = false
     }
     
+    /**
+     * Called when there is location to show in map.
+     * @param location: location object to set map.
+     * @param description: description string to set pin name.
+     */
     private func showMap(location: Location, description: String) {
         
         let latDelta: CLLocationDegrees = 0.01

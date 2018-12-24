@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TransactionDetailViewModel: TransactionDetailViewModelProtocol {
+final class TransactionDetailViewModel: TransactionDetailViewModelProtocol {
     
     var transaction: Transaction
     
@@ -16,6 +16,9 @@ class TransactionDetailViewModel: TransactionDetailViewModelProtocol {
         self.transaction = transaction
     }
     
+    /**
+     * Called to get title.
+     */
     func getTitle() -> String {
         
         return self.transaction.authorisationDate.formatDate(format: "EEEE, dd MMM, HH:mm")

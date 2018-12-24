@@ -9,7 +9,7 @@
 import Foundation
 
 // Transaction model
-class Transaction: Codable {
+final class Transaction: Codable {
     
     var amount: String = ""
     var authorisationDate: Date
