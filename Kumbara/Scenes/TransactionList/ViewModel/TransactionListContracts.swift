@@ -20,6 +20,7 @@ protocol TransactionListViewModelProtocol: class {
     
     func didRowSelect(indexSection: Int, indexRow: Int)
     
+    func didPressLong(indexSection: Int, indexRow: Int) -> TransactionDetailViewController
 }
 
 protocol TransactionListViewProtocol: class {
@@ -29,6 +30,5 @@ protocol TransactionListViewProtocol: class {
     func showError(message: String)
     
     func openPage(transaction: Transaction)
-    
 }
 

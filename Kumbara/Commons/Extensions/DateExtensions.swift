@@ -17,5 +17,23 @@ extension Date {
         
         return dateFormatter.string(from: self)
     }
+    
+    func getDay() -> Date {
+        
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: self)
+        let month = calendar.component(.month, from: self)
+        let day = calendar.component(.day, from: self)
+        
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.month = month
+        dateComponents.day = day
+        dateComponents.hour = 0
+        dateComponents.minute = 0
+        
+        return calendar.date(from: dateComponents) ?? self
+    }
+    
 }
 

@@ -11,7 +11,7 @@ import Foundation
 protocol DataSourceProtocol {
     
     /**
-     * Retrieves the album data from.
+     * Retrieves the transaction data from.
      */
     func getTransactions(callback: @escaping (Array<Transaction>?, Error?) -> Void)
 }

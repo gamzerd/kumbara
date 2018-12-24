@@ -26,13 +26,14 @@ final class TransactionListViewController: UIViewController {
         title = viewModel.getTitle()
         viewModel.load()
         tableView.register(TransactionListTableViewCell.self)
+        registerForPreviewing(with: self, sourceView: tableView)
     }
 }
 
 extension TransactionListViewController: TransactionListViewProtocol {
     
     /**
-     * Shows searched album list.
+     * Shows transaction list.
      */
     func showList() {
         DispatchQueue.main.async {
@@ -46,7 +47,7 @@ extension TransactionListViewController: TransactionListViewProtocol {
      */
     func showError(message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
     /**
@@ -54,7 +55,7 @@ extension TransactionListViewController: TransactionListViewProtocol {
      * @param transaction: Object to set details, fromViewController: controller to show detail
      */
     func openPage(transaction: Transaction) {
-        self.delegate.showDetails(transaction: transaction, fromViewController: self)
+        delegate.showDetails(transaction: transaction, fromViewController: self)
     }
     
 }
@@ -62,25 +63,25 @@ extension TransactionListViewController: TransactionListViewProtocol {
 extension TransactionListViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.viewModel.sections.count
+        return viewModel.sections.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = self.viewModel.sections[section]
+        let section = viewModel.sections[section]
         let date = section.day
         
         return date.formatDate()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let section = self.viewModel.sections[section]
+        let section = viewModel.sections[section]
         return section.transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionListTableViewCell.identifier) as! TransactionListTableViewCell
         
-        let section = self.viewModel.sections[indexPath.section]
+        let section = viewModel.sections[indexPath.section]
         let transaction = section.transactions[indexPath.row]
         cell.setup(with: transaction)
         
@@ -92,11 +93,27 @@ extension TransactionListViewController: UITableViewDataSource {
 extension TransactionListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.viewModel.didRowSelect(indexSection: indexPath.section, indexRow: indexPath.row)
+        viewModel.didRowSelect(indexSection: indexPath.section, indexRow: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
-    
 }
+
+extension TransactionListViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+       
+        guard let indexPath = tableView.indexPathForRow(at: location) else {
+            return nil
+        }
+        
+       return viewModel.didPressLong(indexSection: indexPath.section, indexRow: indexPath.row)
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
+}
+

@@ -20,13 +20,17 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
         self.dataSource = dataSource
     }
     
+    /**
+     * Called when title get.
+     */
     func getTitle() -> String {
         return "Kumbara"
     }
     
     /**
      * Called when a row of the transaction list is selected.
-     * @param index: index of the selected row.
+     * @param indexSection: index of the selected section.
+     * @param indexRow: index of the selected row.
      */
     func didRowSelect(indexSection: Int, indexRow: Int) {
         viewDelegate?.openPage(transaction: sections[indexSection].transactions[indexRow])
@@ -36,7 +40,7 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
      * Called when page is loaded.
      */
     func load() {
-        self.dataSource.getTransactions(callback: self.didReceiveTransactions(list:error:))
+        dataSource.getTransactions(callback: didReceiveTransactions(list:error:))
     }
     
     /**
@@ -49,7 +53,7 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
         if let list = list {
             
             let groups = Dictionary(grouping: list) { (transaction) -> Date in
-                return self.getDay(date: transaction.authorisationDate)
+                return transaction.authorisationDate.getDay()
             }
             
             self.sections = groups.map(DaySection.init(day:transactions:)).sorted(by: {
@@ -64,22 +68,18 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
         }
     }
     
-    func getDay(date: Date) -> Date {
-        
-        let calendar = Calendar.current
-        let year = calendar.component(.year, from: date)
-        let month = calendar.component(.month, from: date)
-        let day = calendar.component(.day, from: date)
-        
-        var dateComponents = DateComponents()
-        dateComponents.year = year
-        dateComponents.month = month
-        dateComponents.day = day
-        dateComponents.hour = 0
-        dateComponents.minute = 0
-        
-        return calendar.date(from: dateComponents) ?? Date()
+    /**
+     * Called when cell pressed long.
+     * @param indexSection: index of the selected section.
+     * @param indexRow: index of the selected row.
+     * @return TransactionDetailViewController: controller to show
+     */
+    func didPressLong(indexSection: Int, indexRow: Int) -> TransactionDetailViewController {
+      
+        let detailViewModel = TransactionDetailViewModel(transaction: sections[indexSection].transactions[indexRow])
+        return TransactionDetailBuilder.make(with: detailViewModel)
     }
+    
 }
 
 struct DaySection {

@@ -12,7 +12,7 @@ class TransactionListTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var title: UILabel!
     @IBOutlet private weak var amount: UILabel!
-    @IBOutlet private weak var albumImageView: UIImageView!
+    @IBOutlet private weak var moneyImageView: UIImageView!
     
     /**
      * Setups cell.
@@ -26,9 +26,9 @@ class TransactionListTableViewCell: UITableViewCell {
         amount.text = transaction.amount + " £"
         
         if (transaction.amount.range(of:"-") != nil){
-            albumImageView.image = UIImage(named: "money-out")
+            moneyImageView.image = UIImage(named: "money-out")
         } else {
-            albumImageView.image = UIImage(named: "money-in")
+            moneyImageView.image = UIImage(named: "money-in")
         }
     }
 }
