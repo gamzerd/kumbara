@@ -8,16 +8,16 @@
 
 import Foundation
 
-final class Service: ServiceProtocol {
+class Service: ServiceProtocol {
     
-    var url: String
+    let url: String
     
     init(url: String) {
         self.url = url
     }
+    
     /**
      * Makes a GET http request to the given path and passes the result to the callback.
-     * field values based on the corresponding rate value in the list.
      */
     func get<D>(path: String, responseType: D.Type, callback: @escaping (D?, Error?) -> Void) where D : Decodable {
         

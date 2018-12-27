@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class TransactionListViewModel: TransactionListViewModelProtocol {
     
@@ -14,7 +15,7 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
     
     weak var viewDelegate: TransactionListViewProtocol?
     
-    private let dataSource: DataSourceProtocol
+    let dataSource: DataSourceProtocol
     
     init (dataSource: DataSourceProtocol) {
         self.dataSource = dataSource
@@ -30,7 +31,7 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
     /**
      * Called when a row of the transaction list is selected.
      * @param indexSection: index of the selected section.
-     * @param indexRow: index of the selected row.
+     * @param indexRow: index of the selected section's row.
      */
     func didRowSelect(indexSection: Int, indexRow: Int) {
         viewDelegate?.openPage(transaction: sections[indexSection].transactions[indexRow])
@@ -52,10 +53,12 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
         
         if let list = list {
             
+            // grouped transactions by authorisationDate
             let groups = Dictionary(grouping: list) { (transaction) -> Date in
                 return transaction.authorisationDate.getDay()
             }
             
+            //
             self.sections = groups.map(DaySection.init(day:transactions:)).sorted(by: {
                 $0.day.compare($1.day) == .orderedDescending
             })
@@ -71,10 +74,10 @@ final class TransactionListViewModel: TransactionListViewModelProtocol {
     /**
      * Called when cell pressed long.
      * @param indexSection: index of the selected section.
-     * @param indexRow: index of the selected row.
+     * @param indexRow: index of the selected section's row.
      * @return TransactionDetailViewController: controller to show
      */
-    func didPressLong(indexSection: Int, indexRow: Int) -> TransactionDetailViewController {
+    func didPressLong(indexSection: Int, indexRow: Int) -> UIViewController {
         
         let detailViewModel = TransactionDetailViewModel(transaction: sections[indexSection].transactions[indexRow])
         return TransactionDetailBuilder.make(with: detailViewModel)

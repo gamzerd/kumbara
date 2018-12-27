@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol TransactionListViewModelProtocol: class {
     
@@ -20,7 +21,7 @@ protocol TransactionListViewModelProtocol: class {
     
     func didRowSelect(indexSection: Int, indexRow: Int)
     
-    func didPressLong(indexSection: Int, indexRow: Int) -> TransactionDetailViewController
+    func didPressLong(indexSection: Int, indexRow: Int) -> UIViewController
 }
 
 protocol TransactionListViewProtocol: class {

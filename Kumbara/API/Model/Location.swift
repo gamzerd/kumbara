@@ -9,7 +9,7 @@
 import Foundation
 
 // Location model
-final class Location: Codable {
+class Location: Codable {
     
     var latitude: String = ""
     var longitude: String = ""

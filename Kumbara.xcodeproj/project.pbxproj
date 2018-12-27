@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA01D27321D1285000551FF6 /* LootDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01D27221D1285000551FF6 /* LootDataSourceTests.swift */; };
+		FA01D27921D1B7E600551FF6 /* AppContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01D27821D1B7E600551FF6 /* AppContainerTests.swift */; };
+		FA01D28021D1BB9900551FF6 /* TransactionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01D27F21D1BB9900551FF6 /* TransactionListViewControllerTests.swift */; };
+		FA01D28221D1CAE400551FF6 /* TransactionListTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01D28121D1CAE400551FF6 /* TransactionListTableViewCellTests.swift */; };
+		FA01D28821D26F4D00551FF6 /* TransactionDetailTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01D28721D26F4D00551FF6 /* TransactionDetailTableViewCellTests.swift */; };
 		FA113E0C21CD51DB00708940 /* TransactionListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA113E0B21CD51DB00708940 /* TransactionListContracts.swift */; };
 		FA113E0E21CD525C00708940 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA113E0D21CD525C00708940 /* TransactionListViewModel.swift */; };
 		FA113E1721CDA92F00708940 /* TransactionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA113E1521CDA92F00708940 /* TransactionListTableViewCell.swift */; };
@@ -22,11 +27,14 @@
 		FA1148EE21CFD32C002608F4 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1148ED21CFD32C002608F4 /* DateExtensions.swift */; };
 		FA1148F321D01B23002608F4 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1148F221D01B23002608F4 /* UITableViewCellExtensions.swift */; };
 		FA1148F521D01CC0002608F4 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1148F421D01CC0002608F4 /* UITableViewExtensions.swift */; };
+		FA1D680221D2F0A600E76E51 /* TransactionListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D680121D2F0A600E76E51 /* TransactionListViewModelTests.swift */; };
+		FA1D680521D31C8900E76E51 /* TransactionDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D680421D31C8900E76E51 /* TransactionDetailViewModelTests.swift */; };
+		FA1D680721D31CAA00E76E51 /* TransactionDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D680621D31CAA00E76E51 /* TransactionDetailViewControllerTests.swift */; };
+		FA1D680921D31D6E00E76E51 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D680821D31D6E00E76E51 /* AppRouterTests.swift */; };
 		FA8A0D2721CBE93D00B9699B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A0D2621CBE93D00B9699B /* AppDelegate.swift */; };
 		FA8A0D2921CBE93D00B9699B /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A0D2821CBE93D00B9699B /* TransactionListViewController.swift */; };
 		FA8A0D2E21CBE94000B9699B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8A0D2D21CBE94000B9699B /* Assets.xcassets */; };
 		FA8A0D3121CBE94000B9699B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A0D2F21CBE94000B9699B /* LaunchScreen.storyboard */; };
-		FA8A0D3C21CBE94000B9699B /* TransactionTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A0D3B21CBE94000B9699B /* TransactionTreeTests.swift */; };
 		FA8A0D4821CC007E00B9699B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A0D4721CC007E00B9699B /* Service.swift */; };
 		FA8A0D4A21CC009200B9699B /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A0D4921CC009200B9699B /* ServiceProtocol.swift */; };
 		FA8A0D4E21CC0B8700B9699B /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A0D4D21CC0B8700B9699B /* AppContainer.swift */; };
@@ -51,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA01D27221D1285000551FF6 /* LootDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootDataSourceTests.swift; sourceTree = "<group>"; };
+		FA01D27821D1B7E600551FF6 /* AppContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerTests.swift; sourceTree = "<group>"; };
+		FA01D27F21D1BB9900551FF6 /* TransactionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewControllerTests.swift; sourceTree = "<group>"; };
+		FA01D28121D1CAE400551FF6 /* TransactionListTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListTableViewCellTests.swift; sourceTree = "<group>"; };
+		FA01D28721D26F4D00551FF6 /* TransactionDetailTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailTableViewCellTests.swift; sourceTree = "<group>"; };
 		FA113E0B21CD51DB00708940 /* TransactionListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListContracts.swift; sourceTree = "<group>"; };
 		FA113E0D21CD525C00708940 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		FA113E1521CDA92F00708940 /* TransactionListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListTableViewCell.swift; sourceTree = "<group>"; };
@@ -66,6 +79,10 @@
 		FA1148ED21CFD32C002608F4 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		FA1148F221D01B23002608F4 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		FA1148F421D01CC0002608F4 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		FA1D680121D2F0A600E76E51 /* TransactionListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModelTests.swift; sourceTree = "<group>"; };
+		FA1D680421D31C8900E76E51 /* TransactionDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModelTests.swift; sourceTree = "<group>"; };
+		FA1D680621D31CAA00E76E51 /* TransactionDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		FA1D680821D31D6E00E76E51 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 		FA8A0D2321CBE93D00B9699B /* Kumbara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kumbara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8A0D2621CBE93D00B9699B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8A0D2821CBE93D00B9699B /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +90,6 @@
 		FA8A0D3021CBE94000B9699B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8A0D3221CBE94000B9699B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8A0D3721CBE94000B9699B /* KumbaraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KumbaraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA8A0D3B21CBE94000B9699B /* TransactionTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTreeTests.swift; sourceTree = "<group>"; };
 		FA8A0D3D21CBE94000B9699B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8A0D4721CC007E00B9699B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FA8A0D4921CC009200B9699B /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
@@ -106,6 +122,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA01D26A21D126EA00551FF6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D26B21D126EF00551FF6 /* Network */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FA01D26B21D126EF00551FF6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D27221D1285000551FF6 /* LootDataSourceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA01D27721D13A8600551FF6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D27821D1B7E600551FF6 /* AppContainerTests.swift */,
+				FA1D680821D31D6E00E76E51 /* AppRouterTests.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA01D27A21D1B9E000551FF6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D27B21D1B9E800551FF6 /* TransactionList */,
+				FA01D28321D26EE400551FF6 /* TransactionDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FA01D27B21D1B9E800551FF6 /* TransactionList */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D27C21D1BB3A00551FF6 /* View */,
+				FA01D27E21D1BB4A00551FF6 /* ViewModel */,
+			);
+			path = TransactionList;
+			sourceTree = "<group>";
+		};
+		FA01D27C21D1BB3A00551FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D27F21D1BB9900551FF6 /* TransactionListViewControllerTests.swift */,
+				FA01D27D21D1BB4000551FF6 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA01D27D21D1BB4000551FF6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D28121D1CAE400551FF6 /* TransactionListTableViewCellTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA01D27E21D1BB4A00551FF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D680121D2F0A600E76E51 /* TransactionListViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA01D28321D26EE400551FF6 /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D28421D26EF500551FF6 /* View */,
+				FA1D680321D31C6100E76E51 /* ViewModel */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		FA01D28421D26EF500551FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D680621D31CAA00E76E51 /* TransactionDetailViewControllerTests.swift */,
+				FA01D28621D26F0E00551FF6 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA01D28621D26F0E00551FF6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA01D28721D26F4D00551FF6 /* TransactionDetailTableViewCellTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FA113E1921CDAA2B00708940 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +302,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FA1D680321D31C6100E76E51 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D680421D31C8900E76E51 /* TransactionDetailViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FA8A0D1A21CBE93D00B9699B = {
 			isa = PBXGroup;
 			children = (
@@ -216,9 +334,9 @@
 				FA8A0D2F21CBE94000B9699B /* LaunchScreen.storyboard */,
 				FA8A0D3221CBE94000B9699B /* Info.plist */,
 				FA8A0D5B21CD24C300B9699B /* Commons */,
+				FA8A0D5F21CD2AD100B9699B /* API */,
 				FA8A0D4C21CC0B3300B9699B /* App */,
 				FA8A0D4B21CC0B2000B9699B /* Scenes */,
-				FA8A0D5F21CD2AD100B9699B /* API */,
 				FA8A0D5521CD1EB700B9699B /* Resources */,
 			);
 			path = Kumbara;
@@ -227,7 +345,9 @@
 		FA8A0D3A21CBE94000B9699B /* KumbaraTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA8A0D3B21CBE94000B9699B /* TransactionTreeTests.swift */,
+				FA01D26A21D126EA00551FF6 /* API */,
+				FA01D27721D13A8600551FF6 /* App */,
+				FA01D27A21D1B9E000551FF6 /* Scenes */,
 				FA8A0D3D21CBE94000B9699B /* Info.plist */,
 			);
 			path = KumbaraTests;
@@ -368,6 +488,7 @@
 					};
 					FA8A0D3621CBE94000B9699B = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 						TestTargetID = FA8A0D2221CBE93D00B9699B;
 					};
 				};
@@ -450,7 +571,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8A0D3C21CBE94000B9699B /* TransactionTreeTests.swift in Sources */,
+				FA1D680721D31CAA00E76E51 /* TransactionDetailViewControllerTests.swift in Sources */,
+				FA01D27321D1285000551FF6 /* LootDataSourceTests.swift in Sources */,
+				FA1D680221D2F0A600E76E51 /* TransactionListViewModelTests.swift in Sources */,
+				FA1D680521D31C8900E76E51 /* TransactionDetailViewModelTests.swift in Sources */,
+				FA01D28821D26F4D00551FF6 /* TransactionDetailTableViewCellTests.swift in Sources */,
+				FA01D27921D1B7E600551FF6 /* AppContainerTests.swift in Sources */,
+				FA1D680921D31D6E00E76E51 /* AppRouterTests.swift in Sources */,
+				FA01D28221D1CAE400551FF6 /* TransactionListTableViewCellTests.swift in Sources */,
+				FA01D28021D1BB9900551FF6 /* TransactionListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +762,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KumbaraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -642,6 +772,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gamzerd.KumbaraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kumbara.app/Kumbara";
@@ -653,6 +785,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KumbaraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,6 +795,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gamzerd.KumbaraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kumbara.app/Kumbara";

@@ -10,9 +10,9 @@ import UIKit
 
 final class TransactionDetailViewController: UIViewController {
     
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
-    private var viewModel: TransactionDetailViewModelProtocol!
+    var viewModel: TransactionDetailViewModelProtocol!
     
     convenience init(viewModel: TransactionDetailViewModelProtocol) {
         self.init()

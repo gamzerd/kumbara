@@ -10,7 +10,7 @@ import UIKit
 
 final class TransactionListViewController: UIViewController {
     
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: TransactionListViewModelProtocol!
     weak var delegate: ShowDetailsCoordinatorDelegate!

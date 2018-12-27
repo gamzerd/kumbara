@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +16,51 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money-in" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-Id-cGq">
+                                <rect key="frame" x="42" y="231" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="HYZ-Mg-rpx"/>
+                                    <constraint firstAttribute="height" constant="64" id="UAT-DH-q4c"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money-out" translatesAutoresizingMaskIntoConstraints="NO" id="ubH-k4-zEH">
+                                <rect key="frame" x="269" y="231" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="1sx-DC-S6I"/>
+                                    <constraint firstAttribute="height" constant="64" id="cRS-mg-QaW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KUMBARA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxj-VQ-iZy">
+                                <rect key="frame" x="105" y="231" width="166" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="73l-YQ-ifl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WXM-Id-cGq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="211" id="6Zb-Kp-2KP"/>
+                            <constraint firstItem="vxj-VQ-iZy" firstAttribute="leading" secondItem="WXM-Id-cGq" secondAttribute="trailing" constant="-1" id="8ur-BV-mI9"/>
+                            <constraint firstItem="WXM-Id-cGq" firstAttribute="top" secondItem="vxj-VQ-iZy" secondAttribute="top" id="BIA-wH-8pr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubH-k4-zEH" secondAttribute="trailing" constant="42" id="Geo-1x-gc1"/>
+                            <constraint firstItem="ubH-k4-zEH" firstAttribute="leading" secondItem="vxj-VQ-iZy" secondAttribute="trailing" constant="-2" id="Ls0-gD-yvb"/>
+                            <constraint firstItem="WXM-Id-cGq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="mO1-gl-4Vd"/>
+                            <constraint firstItem="vxj-VQ-iZy" firstAttribute="top" secondItem="ubH-k4-zEH" secondAttribute="top" id="oDH-UI-bWy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="money-in" width="460.79998779296875" height="460.79998779296875"/>
+        <image name="money-out" width="48" height="48"/>
+    </resources>
 </document>

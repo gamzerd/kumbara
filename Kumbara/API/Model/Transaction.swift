@@ -9,21 +9,21 @@
 import Foundation
 
 // Transaction model
-final class Transaction: Codable {
+class Transaction: Codable {
     
     var amount: String = ""
     var authorisationDate: Date
     var description: String = ""
-    var location: Location?
+    var location: Location? = nil
     var postTransactionBalance: String = ""
     var settlementDate: Date
     
-    init(amount: String,
-         authorisationDate: Date,
-         description: String,
-         location: Location,
-         postTransactionBalance: String,
-         settlementDate: Date)
+    init(amount: String = "",
+         authorisationDate: Date = Date(),
+         description: String = "",
+         location: Location? = nil,
+         postTransactionBalance: String = "",
+         settlementDate: Date = Date())
     {
         self.amount = amount
         self.authorisationDate = authorisationDate

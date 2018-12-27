@@ -10,7 +10,7 @@ import Foundation
 
 final class LootDataSource: DataSourceProtocol {
     
-    private var api: Service
+    var api: Service
     
     init() {
         self.api = Service(url: AppConstants.API.baseUrl)
@@ -18,7 +18,6 @@ final class LootDataSource: DataSourceProtocol {
     
     /**
      * Gets transaction from api.
-     * @param transaction: transaction object.
      * @param callback: completion callback.
      */
     func getTransactions(callback: @escaping (Array<Transaction>?, Error?) -> Void){
@@ -27,7 +26,5 @@ final class LootDataSource: DataSourceProtocol {
             { (data: TransactionListResponse?, error: Error?) -> Void in
                 callback(data, nil)
         })
-        
     }
-    
 }

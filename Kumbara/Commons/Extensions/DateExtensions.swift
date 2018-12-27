@@ -18,6 +18,10 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    /**
+     * Returns Date value without hour and minute info
+     * @return Date
+     */
     func getDay() -> Date {
         
         let calendar = Calendar.current

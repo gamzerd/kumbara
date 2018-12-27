@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,10 +61,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="Nke-Xi-ZUT"/>
             <connections>
-                <outlet property="descriptionLabel" destination="VLT-zt-6Up" id="DMY-ni-api"/>
-                <outlet property="errorLabel" destination="zhu-UB-Kh6" id="Ki6-1H-4CB"/>
+                <outlet property="balanceLabel" destination="VLT-zt-6Up" id="opW-m5-X4H"/>
+                <outlet property="descriptionLabel" destination="rqK-Li-r8a" id="mlL-1M-c9g"/>
+                <outlet property="emptyLocationLabel" destination="zhu-UB-Kh6" id="tmP-b3-sMU"/>
                 <outlet property="mapView" destination="Bys-lZ-aoR" id="IFC-qB-3P9"/>
-                <outlet property="transactionNameLabel" destination="rqK-Li-r8a" id="W7H-qV-6uo"/>
             </connections>
             <point key="canvasLocation" x="32" y="120.53973013493254"/>
         </tableViewCell>

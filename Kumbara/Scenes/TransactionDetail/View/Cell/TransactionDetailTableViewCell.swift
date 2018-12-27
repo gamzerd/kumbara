@@ -11,18 +11,18 @@ import MapKit
 
 class TransactionDetailTableViewCell: UITableViewCell {
     
-    @IBOutlet private weak var errorLabel: UILabel!
-    @IBOutlet private weak var mapView: MKMapView!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var transactionNameLabel: UILabel!
+    @IBOutlet weak var emptyLocationLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     /**
      * Setups cell.
      * @param transaction: transaction object to set cell.
      */
     func setup(with transaction: Transaction) {
-        descriptionLabel.text = "Balance: " + transaction.postTransactionBalance + " £"
-        transactionNameLabel.text = transaction.description
+        balanceLabel.text = "Balance: " + transaction.postTransactionBalance + " £"
+        descriptionLabel.text = transaction.description
         if let location = transaction.location {
             showMap(location: location, description: transaction.description)
         } else {
@@ -35,7 +35,7 @@ class TransactionDetailTableViewCell: UITableViewCell {
      */
     private func showNoLocation() {
         mapView.isHidden = true
-        errorLabel.isHidden = false
+        emptyLocationLabel.isHidden = false
     }
     
     /**

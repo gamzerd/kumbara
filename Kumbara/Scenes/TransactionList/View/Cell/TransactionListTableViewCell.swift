@@ -10,9 +10,9 @@ import UIKit
 
 final class TransactionListTableViewCell: UITableViewCell {
     
-    @IBOutlet private weak var title: UILabel!
-    @IBOutlet private weak var amount: UILabel!
-    @IBOutlet private weak var moneyImageView: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var amount: UILabel!
+    @IBOutlet weak var moneyImageView: UIImageView!
     
     /**
      * Setups cell.
